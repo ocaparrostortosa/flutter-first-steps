@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/src/pages/home_pages.dart';
+import 'package:flutter_widgets/src/pages/home_temp_lists.dart';
  
 void main() => runApp(MyApp());
  
@@ -7,16 +9,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Widgets',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Material App Bar'),
-        ),
-        body: Center(
-          child: Container(
-            child: Text('Hello World'),
-          ),
-        ),
-      ),
+      home: HomePagePages(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
