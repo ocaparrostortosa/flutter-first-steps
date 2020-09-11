@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/src/pages/alert_page.dart';
 import 'package:flutter_widgets/src/providers/menu_pages_provider.dart';
 import 'package:flutter_widgets/src/utils/icono_string_util.dart';
  
@@ -25,7 +26,7 @@ Widget _lista(){
 
       return ListView(
 
-        children: _listaItems(snapshot.data),
+        children: _listaItems(snapshot.data, context),
 
       );
 
@@ -36,7 +37,7 @@ Widget _lista(){
 
 }
 
-List<Widget> _listaItems(List<dynamic> datos) {
+List<Widget> _listaItems(List<dynamic> datos, BuildContext context) {
 
   final List<Widget> opciones = [];
 
@@ -47,6 +48,17 @@ List<Widget> _listaItems(List<dynamic> datos) {
       title: Text(element["texto"]),
       leading: getIcon(element["icon"]), //Icono en base al string
       trailing: Icon(Icons.format_align_right),
+      onTap: (){
+
+        //Ruta de la pagina
+        //final route = MaterialPageRoute(builder: (context)  => AlertPage() );
+        //Para hacer un push a una nueva pantalla, necesitamos el Navigator
+        //Navigator.push(context, route);
+
+        //El metodo Navigator.pushNamed abre una pantalla por nombre de ruta (definido en main.dart)
+        Navigator.pushNamed(context, element['ruta']);
+
+      },//Navegacion entre pantallas
 
     );
 
