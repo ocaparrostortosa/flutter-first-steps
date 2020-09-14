@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       routes: getApplicationRoutes(), //Metodo para obtener las rutas de router.dart
       onGenerateRoute: (settings) { //Metodo a ejecutar cuando se genere una ruta con nombre
         print("Ruta llamada ${settings.name}"); 
-        return MaterialPageRoute (builder: (BuildContext context) => AlertPage());
+        return MaterialPageRoute (builder: (BuildContext context) => AlertPage());        
         }, //Definimos las rutas para las paginas en la app
     );
   }

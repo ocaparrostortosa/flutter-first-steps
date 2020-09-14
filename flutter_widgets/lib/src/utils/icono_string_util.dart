@@ -5,9 +5,10 @@ import 'package:flutter/material.dart';
 //Mapa del icono
 final _icono = <String, IconData>{
 
-  'add_alert'      : Icons.add_alert,
+  'add_alert'     : Icons.add_alert,
   'accessibility' : Icons.accessibility,
-  'folder_open'   : Icons.folder_open
+  'folder_open'   : Icons.folder_open,
+  'donut_large'   : Icons.donut_large
 
 };
 

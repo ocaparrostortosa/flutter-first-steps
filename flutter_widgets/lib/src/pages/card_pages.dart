@@ -15,6 +15,12 @@ class CardPage extends StatelessWidget {
             cardTipo1(),
             SizedBox(height: 20.0,),
             cardTipo2(),
+            SizedBox(height: 20.0,),
+            cardTipo1(),
+            SizedBox(height: 20.0,),
+            cardTipo2(),
+            SizedBox(height: 20.0,),
+            cardTipo1(),
           ],
         ),
       ),
@@ -24,6 +30,10 @@ class CardPage extends StatelessWidget {
 
 Widget cardTipo1() {
   return Card(
+    elevation: 10.0, //Altitud del sombreado -- 0.0 = sin sombra
+    shape: RoundedRectangleBorder( //Definimos el tipo y longitud del borde
+      borderRadius: BorderRadius.circular(20.0),
+    ),
     child: Column(
       children: <Widget>[
         ListTile(
@@ -51,7 +61,7 @@ Widget cardTipo1() {
 
 
 Widget cardTipo2() {
-  return Card(
+  final card = Container(        //Se sustituye la tarjeta por el contenedor para tener mas control 
     child: Column(
       children: <Widget>[
 
@@ -71,6 +81,28 @@ Widget cardTipo2() {
           padding: EdgeInsets.all(10.0),
           ),
       ],
+    ),
+  );
+
+  return Container(
+    
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(30.0),
+      color: Colors.white,
+      boxShadow: <BoxShadow>[
+        BoxShadow(
+          color: Colors.black26, //Nivel de opacidad
+          blurRadius: 10.0,
+          spreadRadius: 2.0,
+          offset: Offset(2.0, 10.0),
+        ),
+      ],
+      //color: Colors.red
+    ),
+    child: ClipRRect(
+      borderRadius: BorderRadius.circular(30.0),
+      child: card,
+      
     ),
   );
 }

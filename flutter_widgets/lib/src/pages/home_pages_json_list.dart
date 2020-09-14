@@ -48,12 +48,12 @@ List<Widget> _listaItems(List<dynamic> datos, BuildContext context) {
       leading: getIcon(element["icon"]), //Icono en base al string
       trailing: Icon(Icons.format_align_right),
       onTap: (){
-
+        
         //Ruta de la pagina
         //final route = MaterialPageRoute(builder: (context)  => AlertPage() );
         //Para hacer un push a una nueva pantalla, necesitamos el Navigator
         //Navigator.push(context, route);
-
+      
         //El metodo Navigator.pushNamed abre una pantalla por nombre de ruta (definido en main.dart)
         Navigator.pushNamed(context, element['ruta']);
 
