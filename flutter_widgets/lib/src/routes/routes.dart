@@ -5,6 +5,8 @@ import 'package:flutter_widgets/src/pages/avatar_page.dart';
 import 'package:flutter_widgets/src/pages/card_pages.dart';
 import 'package:flutter_widgets/src/pages/home_pages_json_list.dart';
 import 'package:flutter_widgets/src/pages/inputs_page.dart';
+import 'package:flutter_widgets/src/pages/listview_page.dart';
+import 'package:flutter_widgets/src/pages/sliders_page.dart';
 
 Map<String, WidgetBuilder> getApplicationRoutes(){
 
@@ -16,6 +18,8 @@ return <String, WidgetBuilder>{ //Este metodo son para pocas rutas
         'card'              : (BuildContext context) => CardPage(),
         'animatedContainer' : (BuildContext context) => AnimatedContainerPage(),
         'inputs'            : (BuildContext context) => InputsPage(),
+        "slider"            : (BuildContext context) => SliderPage(),
+        'list'              : (BuildContext context) => ListaPage(),
 };
 
 }
